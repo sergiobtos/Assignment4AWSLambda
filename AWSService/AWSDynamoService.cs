@@ -12,15 +12,15 @@ using System.Threading.Tasks;
 
 namespace Assignment4AWSLambda.AWSService
 {
-    public class AWSService
+    public class AWSDynamoService
     {
 
         RegionEndpoint Region = RegionEndpoint.USWest2;
-        IAmazonDynamoDB dynamoDBClient { get; set; }
+        IAmazonDynamoDB dynamoDBClient { get; }
         private static AmazonDynamoDBClient client = new AmazonDynamoDBClient();
         String tableName = "Images";
 
-        public AWSService(IAmazonDynamoDB dynamoDBClient)
+        public AWSDynamoService(IAmazonDynamoDB dynamoDBClient)
         {
             this.dynamoDBClient = dynamoDBClient;
             CreateTable();

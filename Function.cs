@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
+using Assignment4AWSLambda.AWSService;
 using System.Threading.Tasks;
 
 using Amazon.Lambda.Core;
@@ -13,6 +13,7 @@ using Amazon.Rekognition.Model;
 
 using Amazon.S3;
 using Amazon.S3.Model;
+using Amazon.DynamoDBv2;
 
 //test
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
@@ -36,6 +37,8 @@ namespace Assignment4AWSLambda
 
         IAmazonRekognition RekognitionClient { get; }
 
+        private IAmazonDynamoDB dynamoDBClient;
+
         float MinConfidence { get; set; } = DEFAULT_MIN_CONFIDENCE;
 
         HashSet<string> SupportedImageTypes { get; } = new HashSet<string> { ".png", ".jpg", ".jpeg" };
@@ -49,6 +52,7 @@ namespace Assignment4AWSLambda
         /// </summary>
         public Function()
         {
+            new AWSDynamoService(dynamoDBClient);
             this.S3Client = new AmazonS3Client();
             this.RekognitionClient = new AmazonRekognitionClient();
 
