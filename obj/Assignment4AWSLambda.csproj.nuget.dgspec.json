@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\IntelliJ Idea\\Assignment4AWSLambda\\Assignment4AWSLambda.csproj": {}
+    "C:\\Comp306_AWSAmazon\\Lab4\\Assignment4AWSLambda\\Assignment4AWSLambda.csproj": {}
   },
   "projects": {
-    "Z:\\IntelliJ Idea\\Assignment4AWSLambda\\Assignment4AWSLambda.csproj": {
+    "C:\\Comp306_AWSAmazon\\Lab4\\Assignment4AWSLambda\\Assignment4AWSLambda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\IntelliJ Idea\\Assignment4AWSLambda\\Assignment4AWSLambda.csproj",
+        "projectUniqueName": "C:\\Comp306_AWSAmazon\\Lab4\\Assignment4AWSLambda\\Assignment4AWSLambda.csproj",
         "projectName": "Assignment4AWSLambda",
-        "projectPath": "Z:\\IntelliJ Idea\\Assignment4AWSLambda\\Assignment4AWSLambda.csproj",
-        "packagesPath": "C:\\Users\\Caique\\.nuget\\packages\\",
-        "outputPath": "Z:\\IntelliJ Idea\\Assignment4AWSLambda\\obj\\",
+        "projectPath": "C:\\Comp306_AWSAmazon\\Lab4\\Assignment4AWSLambda\\Assignment4AWSLambda.csproj",
+        "packagesPath": "C:\\Users\\sergi\\.nuget\\packages\\",
+        "outputPath": "C:\\Comp306_AWSAmazon\\Lab4\\Assignment4AWSLambda\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Caique\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sergi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

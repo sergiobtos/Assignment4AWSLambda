@@ -185,9 +185,6 @@ namespace Assignment4AWSLambda
 
                 Console.WriteLine($"\tSaved {image.KeyName} with confidence {image.Id}");
 
-
-
-
             }
             return;
         }

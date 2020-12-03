@@ -1,22 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "qW70EPvDSTI23rk2+vFKRBgsU3/hAAvo82T4xm+dXTuJTFwgDH5g3ev3DBzISzpIc/rhoCma/m4cVXYZrTrgRg==",
+  "dgSpecHash": "rZ0W76LK4dZLkljQgQj0clTOkRaYgDFTbNVz35k344T+5u8nVpXqPqzFjOY+w9vXiA3YLWl3+tk6tt2bXH5tIg==",
   "success": true,
-  "projectFilePath": "Z:\\IntelliJ Idea\\Assignment4AWSLambda\\Assignment4AWSLambda.csproj",
+  "projectFilePath": "C:\\Comp306_AWSAmazon\\Lab4\\Assignment4AWSLambda\\Assignment4AWSLambda.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Caique\\.nuget\\packages\\amazon.lambda.core\\1.2.0\\amazon.lambda.core.1.2.0.nupkg.sha512",
-    "C:\\Users\\Caique\\.nuget\\packages\\amazon.lambda.s3events\\1.2.0\\amazon.lambda.s3events.1.2.0.nupkg.sha512",
-    "C:\\Users\\Caique\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.1.0\\amazon.lambda.serialization.systemtextjson.2.1.0.nupkg.sha512",
-    "C:\\Users\\Caique\\.nuget\\packages\\awssdk.core\\3.5.1.42\\awssdk.core.3.5.1.42.nupkg.sha512",
-    "C:\\Users\\Caique\\.nuget\\packages\\awssdk.dynamodbv2\\3.5.3\\awssdk.dynamodbv2.3.5.3.nupkg.sha512",
-    "C:\\Users\\Caique\\.nuget\\packages\\awssdk.rekognition\\3.5.2.15\\awssdk.rekognition.3.5.2.15.nupkg.sha512",
-    "C:\\Users\\Caique\\.nuget\\packages\\awssdk.s3\\3.5.5.2\\awssdk.s3.3.5.5.2.nupkg.sha512",
-    "C:\\Users\\Caique\\.nuget\\packages\\grapecity.documents.common\\3.0.0.415\\grapecity.documents.common.3.0.0.415.nupkg.sha512",
-    "C:\\Users\\Caique\\.nuget\\packages\\grapecity.documents.imaging\\3.0.0.415\\grapecity.documents.imaging.3.0.0.415.nupkg.sha512",
-    "C:\\Users\\Caique\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
-    "C:\\Users\\Caique\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512",
-    "C:\\Users\\Caique\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
-    "C:\\Users\\Caique\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512"
+    "C:\\Users\\sergi\\.nuget\\packages\\amazon.lambda.core\\1.2.0\\amazon.lambda.core.1.2.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\amazon.lambda.s3events\\1.2.0\\amazon.lambda.s3events.1.2.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.1.0\\amazon.lambda.serialization.systemtextjson.2.1.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\awssdk.core\\3.5.1.42\\awssdk.core.3.5.1.42.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\awssdk.dynamodbv2\\3.5.3\\awssdk.dynamodbv2.3.5.3.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\awssdk.rekognition\\3.5.2.15\\awssdk.rekognition.3.5.2.15.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\awssdk.s3\\3.5.5.2\\awssdk.s3.3.5.5.2.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\grapecity.documents.common\\3.0.0.415\\grapecity.documents.common.3.0.0.415.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\grapecity.documents.imaging\\3.0.0.415\\grapecity.documents.imaging.3.0.0.415.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }
