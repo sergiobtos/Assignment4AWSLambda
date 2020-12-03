@@ -2,11 +2,11 @@
 
 namespace Assignment4AWSLambda.Model
 {
-    public class Label
+    public class MyLabel
     {
         [DynamoDBProperty]
-        public string TagName { get; set; }
+        public string Key { get; set; }
         [DynamoDBProperty]
-        public int Value { get; set; }
+        public string Value { get; set; }
     }
 }

@@ -3,8 +3,8 @@ using Amazon.DynamoDBv2.DataModel;
 
 namespace Assignment4AWSLambda.Model
 {
-    [DynamoDBTable("Images")]
-    public class Image
+    [DynamoDBTable("MyImage")]
+    public class MyImage
     {
         [DynamoDBHashKey]
         public string Id { get; set; }
@@ -22,6 +22,6 @@ namespace Assignment4AWSLambda.Model
         public string Metadatainfo { get; set; }
 
         [DynamoDBProperty(AttributeName = "Labels")]
-        public List<Label> Labels { get; set; }
+        public List<MyLabel> Labels { get; set; }
     }
 }

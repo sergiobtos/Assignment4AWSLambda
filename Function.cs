@@ -14,6 +14,7 @@ using Amazon.Rekognition.Model;
 using Amazon.S3;
 using Amazon.S3.Model;
 using Amazon.DynamoDBv2;
+using Assignment4AWSLambda.Model;
 
 //test
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
@@ -52,9 +53,11 @@ namespace Assignment4AWSLambda
         /// </summary>
         public Function()
         {
-            new AWSDynamoService(dynamoDBClient);
+            this.dynamoDBClient = new AmazonDynamoDBClient();
             this.S3Client = new AmazonS3Client();
             this.RekognitionClient = new AmazonRekognitionClient();
+
+            new AWSDynamoService(dynamoDBClient);
 
             var environmentMinConfidence = System.Environment.GetEnvironmentVariable(MIN_CONFIDENCE_ENVIRONMENT_VARIABLE_NAME);
             if(!string.IsNullOrWhiteSpace(environmentMinConfidence))
@@ -121,12 +124,14 @@ namespace Assignment4AWSLambda
                 });
 
                 var tags = new List<Tag>();
+                var labels = new List<MyLabel>();
                 foreach(var label in detectResponses.Labels)
                 {
                     if(tags.Count < 10)
                     {
                         Console.WriteLine($"\tFound Label {label.Name} with confidence {label.Confidence}");
                         tags.Add(new Tag { Key = label.Name, Value = label.Confidence.ToString() });
+                        labels.Add(new MyLabel { Key = label.Name, Value = label.Confidence.ToString() });
                     }
                     else
                     {
@@ -134,7 +139,19 @@ namespace Assignment4AWSLambda
                     }
                 }
 
-                await this.S3Client.PutObjectTaggingAsync(new PutObjectTaggingRequest
+
+                MyImage image = new MyImage();
+                image.BucketName = record.S3.Bucket.Name;
+                image.KeyName = record.S3.Object.Key;
+                image.Labels = labels;
+                image.Processed = false;
+                image.Metadatainfo = null;
+
+                image = new AWSDynamoService(dynamoDBClient).Create(image).Result;
+
+                Console.WriteLine($"\tSaved {image.KeyName} with confidence {image.Id}");
+
+                /*await this.S3Client.PutObjectTaggingAsync(new PutObjectTaggingRequest
                 {
                     BucketName = record.S3.Bucket.Name,
                     Key = record.S3.Object.Key,
@@ -142,7 +159,7 @@ namespace Assignment4AWSLambda
                     {
                         TagSet = tags
                     }
-                });
+                });*/
             }
             return;
         }

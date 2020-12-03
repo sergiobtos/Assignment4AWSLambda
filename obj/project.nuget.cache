@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rZ0W76LK4dZLkljQgQj0clTOkRaYgDFTbNVz35k344T+5u8nVpXqPqzFjOY+w9vXiA3YLWl3+tk6tt2bXH5tIg==",
+  "dgSpecHash": "NoABLN25MYefQEkGicSukKFAIhIpdLuNv5qSVF2blAMj5DLoaXU44SCtICSa4XMvN2B8CbSj5Jml2LNg5+t3QA==",
   "success": true,
   "projectFilePath": "C:\\Comp306_AWSAmazon\\Lab4\\Assignment4AWSLambda\\Assignment4AWSLambda.csproj",
   "expectedPackageFiles": [

@@ -18,7 +18,7 @@ namespace Assignment4AWSLambda.AWSService
         RegionEndpoint Region = RegionEndpoint.USWest2;
         IAmazonDynamoDB dynamoDBClient { get; }
         private static AmazonDynamoDBClient client = new AmazonDynamoDBClient();
-        String tableName = "Images";
+        String tableName = "MyImage";
 
         public AWSDynamoService(IAmazonDynamoDB dynamoDBClient)
         {
@@ -26,11 +26,11 @@ namespace Assignment4AWSLambda.AWSService
             CreateTable();
         }
 
-        public async Task<Image> Create(Image image)
+        public async Task<MyImage> Create(MyImage image)
         {
             image.Id = (image.BucketName + image.KeyName);
             DynamoDBContext Context = new DynamoDBContext(dynamoDBClient);
-            await Context.SaveAsync<Image>(image);
+            await Context.SaveAsync<MyImage>(image);
             return image;
         }
 
