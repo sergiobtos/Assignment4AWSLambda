@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "2YKwNdoHEXxv8XVV9huuA60sLETTTgbYFXhrD0R+I+Ng7g49l+7+/nytx+20jo30p+QCPH3vO53YQS0klWp2mw==",
+  "success": true,
+  "projectFilePath": "C:\\Comp306_AWSAmazon\\Lab4\\Assignment4AWSLambda\\Assignment4AWSLambda.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sergi\\.nuget\\packages\\amazon.lambda.core\\1.2.0\\amazon.lambda.core.1.2.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\amazon.lambda.s3events\\1.2.0\\amazon.lambda.s3events.1.2.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.1.0\\amazon.lambda.serialization.systemtextjson.2.1.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\awssdk.core\\3.5.1.42\\awssdk.core.3.5.1.42.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\awssdk.rekognition\\3.5.2.15\\awssdk.rekognition.3.5.2.15.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\awssdk.s3\\3.5.5.2\\awssdk.s3.3.5.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}
