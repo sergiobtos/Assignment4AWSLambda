@@ -19,7 +19,7 @@ namespace Assignment4AWSLambda.Model
         public bool Processed { get; set; }
 
         [DynamoDBProperty]
-        public string Metadatainfo { get; set; }
+        public byte[] Metadata { get; set; }
 
         [DynamoDBProperty(AttributeName = "Labels")]
         public List<MyLabel> Labels { get; set; }

@@ -140,18 +140,8 @@ namespace Assignment4AWSLambda
                 }
 
 
-                MyImage image = new MyImage();
-                image.BucketName = record.S3.Bucket.Name;
-                image.KeyName = record.S3.Object.Key;
-                image.Labels = labels;
-                image.Processed = false;
-                image.Metadatainfo = null;
-
-                image = new AWSDynamoService(dynamoDBClient).Create(image).Result;
-
-                Console.WriteLine($"\tSaved {image.KeyName} with confidence {image.Id}");
-
-                /*await this.S3Client.PutObjectTaggingAsync(new PutObjectTaggingRequest
+                
+                await this.S3Client.PutObjectTaggingAsync(new PutObjectTaggingRequest
                 {
                     BucketName = record.S3.Bucket.Name,
                     Key = record.S3.Object.Key,
@@ -159,7 +149,45 @@ namespace Assignment4AWSLambda
                     {
                         TagSet = tags
                     }
-                });*/
+                });
+
+                byte[] metadata;
+                using (GetObjectResponse response =  await this.S3Client.GetObjectAsync(
+                    record.S3.Bucket.Name,
+                    record.S3.Object.Key))
+                {
+                    using (Stream responseStream = response.ResponseStream)
+                    {
+                        using (StreamReader reader = new StreamReader(responseStream))
+                        {
+                            using (var memStream = new MemoryStream())
+                            {
+                                var buffer = new byte[512];
+                                var bytesRead = default(int);
+
+                                while ((bytesRead = reader.BaseStream.Read(buffer, 0, buffer.Length)) > 0)
+                                    memStream.Write(buffer, 0, bytesRead);
+
+                                metadata = memStream.ToArray();
+                            }
+                        }
+                    }
+                }
+
+                MyImage image = new MyImage();
+                image.BucketName = record.S3.Bucket.Name;
+                image.KeyName = record.S3.Object.Key;
+                image.Labels = labels;
+                image.Processed = false;
+                image.Metadata = metadata;
+
+                image = new AWSDynamoService(dynamoDBClient).Create(image).Result;
+
+                Console.WriteLine($"\tSaved {image.KeyName} with confidence {image.Id}");
+
+
+
+
             }
             return;
         }
