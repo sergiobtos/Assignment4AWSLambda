@@ -14,7 +14,7 @@
     "function-memory-size" : 256,
     "function-timeout"     : 30,
     "function-handler"     : "Assignment4AWSLambda::Assignment4AWSLambda.Function::FunctionHandler",
-    "function-name"        : "Lab4TriggerToDynamo",
+    "function-name"        : "Lab4TriggerS3SaveToDynamo",
     "package-type"         : "Zip",
     "function-role"        : "arn:aws:iam::230199793713:role/lambda_exec_Lab4TriggerToDynamo",
     "tracing-mode"         : "Active",
